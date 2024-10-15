@@ -1,4 +1,4 @@
-import { createServer, startServer } from './frameworks/express/server';
+import { createServer, startServer } from "./frameworks/express/server";
 
 const initializeServer = async () => {
   try {
@@ -7,7 +7,7 @@ const initializeServer = async () => {
 
     startServer(app, PORT);
   } catch (error) {
-    console.error('Failed to initialize server:', error);
+    console.error("Failed to initialize server:", error);
     process.exit(1);
   }
 };
