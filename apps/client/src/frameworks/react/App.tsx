@@ -1,6 +1,6 @@
-import * as ReactDOM from 'react-dom/client';
-import { StrictMode } from 'react';
-import { ReactNode } from 'react';
+import * as ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { ReactNode } from "react";
 
 // Defines the app and renders it
 export const App = () => {
@@ -14,7 +14,7 @@ export const App = () => {
 // Starts the app and renders it in the DOM
 export const startApp = (Component: ReactNode): void => {
   const root = ReactDOM.createRoot(
-    document.getElementById('root') as HTMLElement
+    document.getElementById("root") as HTMLElement
   );
 
   root.render(Component);
