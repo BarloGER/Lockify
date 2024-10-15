@@ -1,12 +1,14 @@
 import * as ReactDOM from "react-dom/client";
 import { StrictMode } from "react";
 import { ReactNode } from "react";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/Router";
 
 // Defines the app and renders it
 export const App = () => {
   return (
     <StrictMode>
-      <h1>Hello World!</h1>
+      <RouterProvider router={router} />
     </StrictMode>
   );
 };
