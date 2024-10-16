@@ -1,3 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export const LandingPage = (): JSX.Element => {
-  return <h1>LandingPage</h1>;
+  const { t } = useTranslation();
+
+  return <h1>{t("landingPage.greeting")}</h1>;
 };
