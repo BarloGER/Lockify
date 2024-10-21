@@ -1,4 +1,4 @@
-import { IPasswordHasher } from "../../services/IPasswordHasher";
+import { IPasswordHasher } from "../../services/password-hasher/IPasswordHasher";
 import bcrypt from "bcrypt";
 
 export class BcryptPasswordHasher implements IPasswordHasher {
