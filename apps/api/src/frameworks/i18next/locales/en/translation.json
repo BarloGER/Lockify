@@ -1,4 +1,17 @@
 {
   "greeting": "Welcome to Lockify API",
-  "notFound": "Resource not found!"
+  "notFound": "Resource not found!",
+
+  "userManagement": {
+    "registration": {
+      "success": "Your registration was successful. You have been sent a code to verify your e-mail address. Please copy this code, log in and you will be asked to enter it.",
+      "failed": "An error occurred during registration, please try again later or contact support.",
+      "userOrEmailExists": "The username or e-mail address is already taken. Please enter something else."
+    }
+  },
+
+  "errors": {
+    "validationError": "Input validation failed!",
+    "unauthorizedError": "Not authorized!"
+  }
 }
