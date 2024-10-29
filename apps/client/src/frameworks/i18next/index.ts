@@ -4,7 +4,6 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import translationEN from "./locales/en/translation.json";
 import translationDE from "./locales/de/translation.json";
 
-// Funktion zur Initialisierung von i18next
 export const initializeI18n = async () => {
   try {
     await i18next
@@ -25,7 +24,7 @@ export const initializeI18n = async () => {
           caches: ["localStorage"],
           lookupLocalStorage: "language",
         },
-        debug: true, // Für Entwicklungszwecke aktivieren
+        debug: true,
       });
   } catch (error) {
     console.error("Failed to initialize i18next:", error);
