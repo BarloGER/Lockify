@@ -1,4 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* You can add global styles to this file, and also import other style files */
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+
+    --color-background: light-dark(#f7f9fc, #1c2029);
+    --color-primary: light-dark(#0056b3, #3a8dca);
+    --color-accent: light-dark(#007bff, #1a74af);
+    --color-text: light-dark(#2e3440, #d1d1d1);
+    --color-success: light-dark(#15803d, #15803d);
+    --color-error: light-dark(#b91c1c, #b91c1c);
+  }
+
+  body {
+    height: 100svh;
+    width: 100svw;
+    background-color: var(--color-background);
+  }
+}
