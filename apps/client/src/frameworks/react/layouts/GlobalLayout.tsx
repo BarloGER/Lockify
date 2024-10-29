@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-import { NavBar } from "../components/organisms/NavBar";
 
 export const GlobalLayout = (): JSX.Element => {
   const isAuthenticated = true;
@@ -8,10 +7,5 @@ export const GlobalLayout = (): JSX.Element => {
     return <h1>Not Authenticated!</h1>;
   }
 
-  return (
-    <>
-      <NavBar />
-      <Outlet />
-    </>
-  );
+  return <Outlet />;
 };
