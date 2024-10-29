@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouteObject } from "react-router-dom";
 import { GlobalLayout } from "../layouts/GlobalLayout";
-import { LandingPage } from "../components/pages/LandingPage";
+import { LandingPage } from "../../../features/landing/frameworks/react/components/pages/LandingPage";
+import { RegisterPage } from "../../../features/user-managment/frameworks/react/ui/pages/RegisterPage";
 
 const routes: RouteObject[] = [
   {
@@ -10,6 +11,10 @@ const routes: RouteObject[] = [
       {
         index: true,
         element: <LandingPage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />,
       },
     ],
   },
