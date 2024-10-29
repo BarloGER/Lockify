@@ -3,7 +3,6 @@ import cors, { CorsOptions } from "cors";
 import { i18nMiddleware } from "./middlewares/i18nMiddleware";
 import { userRouter } from "../../features/user-management/frameworks/express/routes/userRouter";
 import { sessionConfig } from "../express-session/sessionConfig";
-import { errorHandler } from "./middlewares/errorHandler";
 
 export const createServer = () => {
   const app: Express = express();
@@ -29,8 +28,6 @@ export const createServer = () => {
     const notFoundMessage = req.t("notFound");
     res.status(404).send(`<h1>404! ${notFoundMessage}</h1>`);
   });
-
-  app.use(errorHandler);
 
   return app;
 };

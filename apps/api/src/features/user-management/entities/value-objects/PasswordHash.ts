@@ -1,11 +1,9 @@
-import { ValidationError } from "../../../../utils/errors";
-
 export class PasswordHash {
   private readonly passwordHash: string;
 
   constructor(passwordHash: string) {
     if (!this.isValid(passwordHash)) {
-      throw new ValidationError();
+      throw new Error("errors.unknownError");
     }
     this.passwordHash = passwordHash;
   }

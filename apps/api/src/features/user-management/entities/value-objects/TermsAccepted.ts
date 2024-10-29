@@ -1,11 +1,9 @@
-import { ValidationError } from "../../../../utils/errors";
-
-export class Terms {
+export class TermsAccepted {
   private readonly termsAcceptedAt: Date;
 
   constructor(termsAccepted: boolean) {
     if (!this.isValid(termsAccepted)) {
-      throw new ValidationError();
+      throw new Error("errors.unknownError");
     }
 
     this.termsAcceptedAt = new Date();

@@ -1,11 +1,9 @@
-import { ValidationError } from "../../../../utils/errors";
-
 export class Email {
   private readonly email: string;
 
   constructor(email: string) {
     if (!this.isValid(email)) {
-      throw new ValidationError();
+      throw new Error("errors.unknownError");
     }
     this.email = email;
   }

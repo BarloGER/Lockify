@@ -34,12 +34,13 @@ userRouter.post("/register", async (req, res) => {
 
   try {
     await registerGuestController.registerGuest(rawData);
-
     const response = registerGuestPresenter.getResponse(translator);
-
-    res.status(200).json(response);
+    if (response.success) {
+      res.status(201).json(response);
+    } else {
+      res.status(400).json(response);
+    }
   } catch (error) {
     console.log(error);
-    res.status(400).json({ message: translator.translate(error.message) });
   }
 });
