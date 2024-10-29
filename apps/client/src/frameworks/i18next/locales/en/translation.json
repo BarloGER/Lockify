@@ -1,5 +1,34 @@
 {
-  "landingPage": {
-    "greeting": "Welcome to Lockify"
+  "landing": {
+    "labels": {
+      "greeting": "Welcome to Lockify"
+    }
+  },
+
+  "userManagement": {
+    "registerGuest": {
+      "labels": {
+        "title": "Register",
+        "username": "Username",
+        "email": "E-mail",
+        "password": "Password",
+        "masterPassword": "Master-Password",
+        "newsletterAccepted": "Subscribe to newsletter",
+        "termsAccepted": "Accept terms of use",
+        "submitButton": "Register"
+      },
+
+      "placeholders": {
+        "username": "Username",
+        "email": "E-mail",
+        "password": "Password",
+        "masterPassword": "Master-Password"
+      }
+    }
+  },
+
+  "errors": {
+    "networkError": "Something went wrong. Please try again. If the problem persists, please contact support.",
+    "unkownError": "Something went wrong. Please try again. If the problem persists, please contact support."
   }
 }
