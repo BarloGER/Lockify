@@ -1,6 +1,5 @@
 import * as ReactDOM from "react-dom/client";
-import { StrictMode } from "react";
-import { ReactNode } from "react";
+import { StrictMode, ReactNode } from "react";
 import { RouterProvider } from "react-router-dom";
 import { I18nextProvider } from "react-i18next";
 import { router } from "./routes/Router";
