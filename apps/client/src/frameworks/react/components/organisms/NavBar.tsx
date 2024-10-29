@@ -1,7 +1,17 @@
+import { useTranslation } from "react-i18next";
+
 export const NavBar = (): JSX.Element => {
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (language: string) => {
+    i18n.changeLanguage(language);
+  };
+
   return (
-    <div className="w-full h-12 bg-gray-800 flex items-center px-4">
-      <h1 className="text-white">Navigation</h1>
-    </div>
+    <nav className="h-full w-full flex items-center px-4 bg-backgroundColor">
+      <span className="text-textColor font-bold text-lg">Navigation</span>
+      <button onClick={() => changeLanguage("de")}>DE</button>
+      <button onClick={() => changeLanguage("en")}>EN</button>
+    </nav>
   );
 };
