@@ -1,5 +1,3 @@
-import { ValidationError } from "../../../../utils/errors";
-
 export class Role {
   private readonly role: string;
 
@@ -7,7 +5,7 @@ export class Role {
 
   constructor(role: string) {
     if (!this.isValid(role)) {
-      throw new ValidationError();
+      throw new Error("errors.unknownError");
     }
     this.role = role;
   }

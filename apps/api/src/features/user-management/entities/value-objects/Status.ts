@@ -1,5 +1,3 @@
-import { ValidationError } from "../../../../utils/errors";
-
 export class Status {
   private readonly status: string;
 
@@ -13,7 +11,7 @@ export class Status {
 
   constructor(status: string) {
     if (!this.isValid(status)) {
-      throw new ValidationError();
+      throw new Error("errors.unknownError");
     }
     this.status = status;
   }

@@ -1,11 +1,9 @@
-import { ValidationError } from "../../../../utils/errors";
-
 export class SecretEncryptionIv {
   private readonly iv: string;
 
   constructor(iv: string) {
     if (!this.isValid(iv)) {
-      throw new ValidationError();
+      throw new Error("errors.unknownError");
     }
     this.iv = iv;
   }

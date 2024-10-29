@@ -1,7 +1,6 @@
 import { Pool } from "pg";
 import { IUserRepository } from "./IUserRepository";
 import { RegisteredUser } from "../../entities/RegisteredUser";
-import { CustomError } from "../../../../utils/errors";
 
 export class UserRepository implements IUserRepository {
   constructor(private readonly dbClient: Pool) {}
@@ -46,10 +45,10 @@ export class UserRepository implements IUserRepository {
     emailVerificationToken: string,
     emailVerificationTokenExpiresAt: Date,
     hashedPassword: string,
-    newsletter: boolean,
     encryptedSecret: string,
     secretEncryptionIv: string,
     secretEncryptionSalt: string,
+    newsletterAccepted: boolean,
     termsAcceptedAt: Date
   ): Promise<RegisteredUser> {
     try {
@@ -64,7 +63,7 @@ export class UserRepository implements IUserRepository {
         encrypted_secret,
         secret_encryption_iv,
         secret_encryption_salt,
-        newsletter,
+        newsletter_accepted,
         terms_accepted_at,
         created_at,
         updated_at   
@@ -80,7 +79,7 @@ export class UserRepository implements IUserRepository {
         encryptedSecret,
         secretEncryptionIv,
         secretEncryptionSalt,
-        newsletter,
+        newsletterAccepted,
         termsAcceptedAt,
       ];
 
@@ -96,7 +95,7 @@ export class UserRepository implements IUserRepository {
       return registeredUser;
     } catch (error) {
       console.error("Error creating registeredUser:", error);
-      throw new CustomError(400, "userManagement.registration.failed");
+      throw new Error("errors.unknownError");
     }
   }
 }

@@ -1,11 +1,9 @@
-import { ValidationError } from "../../../../utils/errors";
-
 export class Username {
   private readonly username: string;
 
   constructor(username: string) {
     if (!this.isValid(username)) {
-      throw new ValidationError();
+      throw new Error("errors.unknownError");
     }
     this.username = username;
   }

@@ -3,15 +3,15 @@
   "notFound": "Ressource nicht gefunden!",
 
   "userManagement": {
-    "registration": {
+    "registerGuest": {
       "success": "Deine Registrierung war erfolgreich. Dir wurde zum verifizieren deiner E-Mail-Adresse, ein Code an die angegebene Mail-Adresse gesendet. Bitte kopiere diesen Code, logge dich ein und du wirst aufgefordert ihn einzugeben.",
-      "failed": "Bei der registrierung ist ein Fehler aufgetreten, bitte versuche es später erneut, oder wende dich an den Support.",
       "userOrEmailExists": "Der Benutzername, oder die E-Mail-Adresse ist bereits vergeben. Bitte gebe etwas anderes an."
     }
   },
 
   "errors": {
     "validationError": "Input validierung fehlgeschlagen!",
+    "unknownError": "Etwas ist schiefgelaufen. Bitte versuche es erneut. Falls das Problem weiterhin besteht, wende dich an den Support.",
     "unauthorizedError": "Nicht authorisiert!"
   }
 }

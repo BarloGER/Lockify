@@ -1,11 +1,9 @@
-import { ValidationError } from "../../../../utils/errors";
-
 export class PhoneNumber {
   private readonly phoneNumber: string;
 
   constructor(phoneNumber: string) {
     if (!this.isValid(phoneNumber)) {
-      throw new ValidationError();
+      throw new Error("errors.unknownError");
     }
     this.phoneNumber = phoneNumber;
   }
