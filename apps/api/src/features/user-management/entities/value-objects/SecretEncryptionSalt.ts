@@ -1,11 +1,9 @@
-import { ValidationError } from "../../../../utils/errors/ValidationError";
-
 export class SecretEncryptionSalt {
   private readonly salt: string;
 
   constructor(salt: string) {
     if (!this.isValid(salt)) {
-      throw new ValidationError();
+      throw new Error("errors.unknownError");
     }
     this.salt = salt;
   }

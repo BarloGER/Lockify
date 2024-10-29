@@ -11,10 +11,10 @@ export interface IUserRepository {
     emailVerificationToken: string,
     emailVerificationTokenExpiresAt: Date,
     hashedPassword: string,
-    newsletter: boolean,
     encryptedSecret: string,
     secretEncryptionIv: string,
     secretEncryptionSalt: string,
+    newsletterAccepted: boolean,
     termsAcceptedAt: Date
   ): Promise<RegisteredUser>;
 }

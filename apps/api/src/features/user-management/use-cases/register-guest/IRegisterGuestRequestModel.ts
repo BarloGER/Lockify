@@ -2,9 +2,9 @@ export interface IRegisterGuestRequestModel {
   username: string;
   email: string;
   password: string;
-  newsletter: boolean;
+  newsletterAccepted: boolean;
   encryptedSecret: string;
   secretEncryptionIv: string;
   secretEncryptionSalt: string;
-  terms: boolean;
+  termsAccepted: boolean;
 }

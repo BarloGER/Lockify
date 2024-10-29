@@ -9,22 +9,22 @@ export class RegisterGuestController {
       username,
       email,
       password,
-      newsletter,
       encryptedSecret,
       secretEncryptionIv,
       secretEncryptionSalt,
-      terms,
+      newsletterAccepted,
+      termsAccepted,
     } = rawData;
 
     const requestModel: IRegisterGuestRequestModel = {
       username,
       email,
       password,
-      newsletter,
+      newsletterAccepted,
       encryptedSecret,
       secretEncryptionIv,
       secretEncryptionSalt,
-      terms,
+      termsAccepted,
     };
 
     await this.interactor.registerGuest(requestModel);
