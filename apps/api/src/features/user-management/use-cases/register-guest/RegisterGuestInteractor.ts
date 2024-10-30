@@ -1,10 +1,5 @@
-import { IUserRepository } from "../../interface-adapters/repositories/IUserRepository";
-import { IPasswordHasher } from "../../services/password-hasher/IPasswordHasher";
-import { ITokenGenerator } from "../../services/token-generator/ITokenGenerator";
-import { IRegisterGuestInputPort } from "./IRegisterGuestInputPort";
-import { IRegisterGuestOutputPort } from "./IRegisterGuestOutputPort";
-import { IRegisterGuestRequestModel } from "./IRegisterGuestRequestModel";
-import { IRegisterGuestResponseModel } from "./IRegisterGuestResponseModel";
+import { INotificationService } from "@global-services/notification";
+
 import {
   Role,
   Status,
@@ -17,8 +12,16 @@ import {
   SecretEncryptionIv,
   SecretEncryptionSalt,
   TermsAccepted,
-} from "../../entities/value-objects";
-import { INotificationService } from "../../../../services/notification/INotificationService";
+} from "@user-management-entities/value-objects";
+import { IUserRepository } from "@user-management-interface-adapters/repositories";
+import { IPasswordHasher } from "@user-management-services/password-hasher";
+import { ITokenGenerator } from "@user-management-services/token-generator";
+import {
+  IRegisterGuestInputPort,
+  IRegisterGuestOutputPort,
+  IRegisterGuestRequestModel,
+  IRegisterGuestResponseModel,
+} from "@user-management-use-cases/register-guest";
 
 export class RegisterGuestInteractor implements IRegisterGuestInputPort {
   constructor(

@@ -1,0 +1,1 @@
+export { RegisterGuestController } from "./RegisterGuestController";

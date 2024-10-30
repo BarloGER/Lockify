@@ -1,0 +1,1 @@
+export { RegisterGuestViewModel } from "./RegisterGuestViewModel";

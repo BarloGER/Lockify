@@ -3,7 +3,22 @@
   "compilerOptions": {
     "outDir": "../../dist/out-tsc",
     "module": "commonjs",
-    "types": ["node", "express"]
+    "types": ["node", "express"],
+    "baseUrl": "./src",
+    "paths": {
+      "@global-frameworks/*": ["./global/frameworks/*"],
+      "@global-services/*": ["./global/services/*"],
+
+      "@user-management-entities/*": ["./features/user-management/entities/*"],
+      "@user-management-frameworks/*": [
+        "./features/user-management/frameworks/*"
+      ],
+      "@user-management-services/*": ["./features/user-management/services/*"],
+      "@user-management-interface-adapters/*": [
+        "./features/user-management/interface-adapters/*"
+      ],
+      "@user-management-use-cases/*": ["./features/user-management/use-cases/*"]
+    }
   },
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"],
   "include": ["src/**/*.ts"]

@@ -1,4 +1,4 @@
-import { RegisteredUser } from "../../entities/RegisteredUser";
+import { RegisteredUser } from "@user-management-entities/index";
 
 export interface IUserRepository {
   isUsernameAvailable(username: string): Promise<boolean>;

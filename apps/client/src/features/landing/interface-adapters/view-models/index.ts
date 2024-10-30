@@ -1,0 +1,1 @@
+export { LandingViewModel } from "./LandingViewModel";

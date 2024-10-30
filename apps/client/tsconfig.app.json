@@ -9,7 +9,29 @@
       "vite/client"
     ],
     "esModuleInterop": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@global-frameworks/*": ["./global/frameworks/*"],
+      "@global-ui/*": ["./global/frameworks/react/ui/*"],
+      "@global-services/*": ["./global/services/*"],
+
+      "@user-management-entities/*": ["./features/user-management/entities/*"],
+      "@user-management-ui/*": [
+        "./features/user-management/frameworks/react/ui/*"
+      ],
+      "@user-management-interface-adapters/*": [
+        "./features/user-management/interface-adapters/*"
+      ],
+      "@user-management-use-cases/*": [
+        "./features/user-management/use-cases/*"
+      ],
+
+      "@landing-ui/*": ["./features/landing/frameworks/react/ui/*"],
+      "@landing-interface-adapters/*": [
+        "./features/landing/interface-adapters/*"
+      ]
+    }
   },
   "exclude": [
     "src/**/*.spec.ts",

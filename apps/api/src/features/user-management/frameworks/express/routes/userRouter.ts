@@ -1,14 +1,18 @@
 import { Router } from "express";
-import { RegisterGuestController } from "../../../interface-adapters/controllers/RegisterGuestController";
-import { BcryptPasswordHasher } from "../../bcrypt/BcryptPasswordHasher";
-import { UserRepository } from "../../../interface-adapters/repositories/UserRepository";
-import { pgClient } from "../../../../../frameworks/db/postgres";
-import { RegisterGuestInteractor } from "../../../use-cases/register-guest/RegisterGuestInteractor";
-import { RegisterGuestPresenter } from "../../../interface-adapters/presenters/RegisterGuestPresenter";
-import { TokenGenerator } from "../../../services/token-generator/TokenGenerator";
-import { NotificationService } from "../../../../../services/notification/NotificationService";
-import { IRegisterGuestRequestModel } from "../../../use-cases/register-guest/IRegisterGuestRequestModel";
-import { I18nTranslator } from "../../../../../services/translation/I18nTranslator";
+
+import { pgClient } from "@global-frameworks/db/postgres";
+import { NotificationService } from "@global-services/notification";
+import { I18nTranslator } from "@global-services/translation";
+
+import { BcryptPasswordHasher } from "@user-management-frameworks/bcrypt";
+import { RegisterGuestController } from "@user-management-interface-adapters/controllers";
+import { RegisterGuestPresenter } from "@user-management-interface-adapters/presenters";
+import { UserRepository } from "@user-management-interface-adapters/repositories";
+import { TokenGenerator } from "@user-management-services/token-generator";
+import {
+  RegisterGuestInteractor,
+  IRegisterGuestRequestModel,
+} from "@user-management-use-cases/register-guest";
 
 export const userRouter = Router();
 

@@ -1,7 +1,7 @@
-import { initializeApp } from "./frameworks/react/App";
-import { initializeI18n } from "./frameworks/i18next";
-import { validateEnv } from "./configs/validateEnv";
-import "./frameworks/tailwind/styles.css";
+import { initializeApp } from "./global/frameworks/react/App";
+import { initializeI18n } from "./global/frameworks/i18next";
+import { validateEnv } from "./global/configs/validateEnv";
+import "./global/frameworks/tailwind/styles.css";
 
 const initializeClient = async (): Promise<void> => {
   try {

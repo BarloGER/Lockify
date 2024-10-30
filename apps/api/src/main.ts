@@ -1,8 +1,6 @@
-import { createServer, startServer } from "./frameworks/express/server";
-import { initializeI18n } from "./frameworks/i18next";
-import { validateEnv } from "./configs/validateEnv";
-
-console.log("NODE_ENV", process.env.NODE_ENV);
+import { createServer, startServer } from "./global/frameworks/express/server";
+import { initializeI18n } from "./global/frameworks/i18next/index";
+import { validateEnv } from "./global/configs/validateEnv";
 
 const initializeServer = async () => {
   try {

@@ -1,6 +1,6 @@
 import { Pool } from "pg";
 import { IUserRepository } from "./IUserRepository";
-import { RegisteredUser } from "../../entities/RegisteredUser";
+import { RegisteredUser } from "@user-management-entities/index";
 
 export class UserRepository implements IUserRepository {
   constructor(private readonly dbClient: Pool) {}

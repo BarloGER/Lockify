@@ -11,9 +11,7 @@ export class RegisterGuestController {
       username,
       email,
       password,
-      encryptedSecret,
-      secretEncryptionIv,
-      secretEncryptionSalt,
+      masterPassword,
       newsletterAccepted,
       termsAccepted,
     } = rawData;
@@ -22,10 +20,8 @@ export class RegisterGuestController {
       username,
       email,
       password,
+      masterPassword,
       newsletterAccepted,
-      encryptedSecret,
-      secretEncryptionIv,
-      secretEncryptionSalt,
       termsAccepted,
     };
 

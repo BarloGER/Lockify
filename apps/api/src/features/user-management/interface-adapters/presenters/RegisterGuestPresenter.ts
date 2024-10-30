@@ -1,6 +1,8 @@
-import { ITranslator } from "../../../../services/translation/ITranslator";
-import { IRegisterGuestOutputPort } from "../../use-cases/register-guest/IRegisterGuestOutputPort";
-import { IRegisterGuestResponseModel } from "../../use-cases/register-guest/IRegisterGuestResponseModel";
+import { ITranslator } from "@global-services/translation";
+import {
+  IRegisterGuestResponseModel,
+  IRegisterGuestOutputPort,
+} from "@user-management-use-cases/register-guest";
 
 export class RegisterGuestPresenter implements IRegisterGuestOutputPort {
   private responseModel: IRegisterGuestResponseModel | null = null;
